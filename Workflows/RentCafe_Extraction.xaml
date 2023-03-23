@@ -1,0 +1,266 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="RentCafe_Extraction" this:RentCafe_Extraction.in_City="Austin" this:RentCafe_Extraction.in_MinBudget="1000" this:RentCafe_Extraction.in_MaxBudget="2000" this:RentCafe_Extraction.in_Bedroom="2" this:RentCafe_Extraction.in_Bathroom="2" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_City" Type="InArgument(x:String)" />
+    <x:Property Name="in_MinBudget" Type="InArgument(x:String)" />
+    <x:Property Name="in_MaxBudget" Type="InArgument(x:String)" />
+    <x:Property Name="in_Bedroom" Type="InArgument(x:String)" />
+    <x:Property Name="in_Bathroom" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>993,1660</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>RentCafe_Extraction_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="RentCafe_Extraction" sap:VirtualizedContainerService.HintSize="477,1595" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Best 2 Bedroom Apartments in Austin, TX: from $1,035 | RentCafe" sap:VirtualizedContainerService.HintSize="435,1507" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="4a24d9ae-dae0-4487-8cd0-41a3cdf4490a" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="401,1290" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click to selecting price" sap:VirtualizedContainerService.HintSize="359,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" UnblockInput="True">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2414cba5-502a-46c9-94f2-438af85d9e97" InformativeScreenshot="b313d8ac4a0abd1dfb9bedd70c239c58" Selector="&lt;webctrl id='dropdownRent' tag='BUTTON' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  PriceMin'" sap:VirtualizedContainerService.HintSize="359,135" sap2010:WorkflowViewState.IdRef="TypeInto_1" SimulateType="True" Text="[in_MinBudget]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d262294a-7f67-4f9e-a42f-b1a67886d960" InformativeScreenshot="9f096b7ee952796a7117d47d23b7061a" Selector="&lt;webctrl id='PriceMin' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  PriceMax'" sap:VirtualizedContainerService.HintSize="359,135" sap2010:WorkflowViewState.IdRef="TypeInto_2" SimulateType="True" Text="[in_MaxBudget]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="80922f2e-5a12-4130-8b87-92ab59cb61e5" InformativeScreenshot="350561cd445fb48c858e753cd936d91e" Selector="&lt;webctrl id='PriceMax' tag='INPUT' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  dropdownBeds'" sap:VirtualizedContainerService.HintSize="359,107" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a534e44b-1474-40ba-9b39-7ee6da64c003" InformativeScreenshot="0ad2c3f504d6c1bc5d7ea0286c1b7f9c" Selector="&lt;webctrl id='dropdownBeds' tag='BUTTON' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="359,107" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="745b25fc-77c0-4702-8a52-2bbd5ef705f2" InformativeScreenshot="7faf38bde8fddd0d5d0abec0f2711a5c" Selector="[string.Format(&quot;&lt;html app='chrome.exe' title='100 Best Apartments in Austin, TX (with reviews) | RentCafe' /&gt;&lt;webctrl aaname='{0}' parentid='filter-beds' tag='SPAN' /&gt;&quot;, in_Bedroom)]">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON  dropdownBathroo...'" sap:VirtualizedContainerService.HintSize="359,107" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="53dbeeb4-b460-494d-961e-1cf2b4978ccb" InformativeScreenshot="f7b7ce58e6ecae9ddc8dfbd816b4543b" Selector="&lt;webctrl id='dropdownBathrooms' tag='BUTTON' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="359,87" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="72db160d-21bc-4130-b28b-26eae784b3c4">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'BUTTON  dropdownBeds'" sap:VirtualizedContainerService.HintSize="359,135" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="Any&#xA;            Studio&#xA;            1&#xA;            2&#xA;            3&#xA;            4+">
+              <ui:SelectItem.Items>
+                <scg:List x:TypeArguments="x:String" Capacity="4">
+                  <x:String xml:space="preserve">Any
+            Studio
+            1
+            2
+            3
+            4+</x:String>
+                  <x:String xml:space="preserve">Clear
+                        Done</x:String>
+                </scg:List>
+              </ui:SelectItem.Items>
+              <ui:SelectItem.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="61d29385-c256-412a-aecf-c8ba5e2eaf16" InformativeScreenshot="18f484dc07d9df31d0e3c53c04864e8f" Selector="&lt;webctrl id='dropdownBeds' tag='BUTTON' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SelectItem.Target>
+            </ui:SelectItem>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAA8vSURBVGhDxZkLWFXVtsf3SW5ZmeIrqETez83mKfJSFClARVErrU4i96uTkSko+Dh2OupNS02F8EGJCubjPHqAWSgCYgooZoLXFANkw2ZvEB9sxXPP0cA1zhhzzrX22hyyW7d77/y+/zcec629fmPMOdeS0vwa4zGbfrYv2A9JfsfDITNP51pwJsJP3zg2wNwxYRR0TAiBxqhA8zfhvvqCIM/yd9wdMuOG204b0f9BJ3H7/88g6LkOdqkFAR7lMii3Kj9ajrmuRAcLoT8+SCod5VUz027onP/TYgh8sdOTKxrG+nd2RAdLDAxhrCyBE6QAlXNyzP1gaB8XKF0ZjwWhsjwd8/7XC1ns9ASCy1uDQyhgKJYbR4C80+3oM0jyBSj3g1jMJftkgyDD0X6FeNyvN6gzZaO0Nax7rIMEY20VUNFVGUgGV+Jxcj4I2qICsEC0TIEsJlsdqtX/aqsx027YnPox/mZLJ4M4kAKqhhWSoaICJTWkkh9LoOQjNAO3yMTmAuFihM4cO3TQNIHxywYtpwwrg8ndJDhuEZCsAGSQopPcclACMxEk8/2xMLQydFQA87lkH+3YAFjkYPfLtlT6SPsV6u5aYFQ+AaCVu8Z8AcLmhK/Omcb4YyEIRxYByRqFT9YYqfK5xSIe/3lF0KtNXub7LruwHJB3jPkEJFvKyUAiz8DkPAITpEUcWlYrKcJPmmk3eI7Au/+gw1MXrutkgLTs+FC27BSrpHRRWHwY9wkMrQxpjPTjnSRLULLtJQbay2eK5Dof6tM54qF/++mDXR3qo7fqIgGRL4DUlvkyoFpKF3vHAjBCJymA5AtIQzj5fuhzqWNDuK9U5O9eIzD7HnRglC6SVODWgBYYpj66SnCy5YAEIlsEQnCDKkeAPKY5i+XSMbXgNWkOdisFrvV4cNgjTu8vHG/pJkLhj8gHSgBZfJpjVhYCGeMj4dbOHLhz9hvobjOBMrq7QLp1Bu41b4CemqnQUz0KFQzdp4KknlPBPCYr+zjXo8wxX9H1Ej+z7YB+tgLbMpxeD8qPyp8GZyeFCFgVHAMUwKJL6q62PxfPoP+7Q7p6EAtJEFCBUvepAKn7ZAACC9BqlscCKRfIfJ7j8duv2FuvwoNDH3EK2j8DglEpq2MVMFpma2guWmomXFJz1jq419Ul0PhoM0vwZe1dyC2/A9tRxy79APXtPWJWjJ4uXJH1CBSAoP7Mclg5Rp2kHBcWiPJj+etHfK1XYUjUyOSAfYlS4L5pELRvOhQ9HyoA+T612ou0V9Gn/XhzxzZBw8fBmrvwev7fIGTFTRi98hazISuF0E/Muo3X/CCu5uNea44MBj0n/dFHi/49Ahc+zvO5Kl8sinw/WDBrWKrA12i81kTXBOxNlAieCklaH89hBXRLGEGjlRWug86stQKBOn4P5uZx8FECeBT5QixPVhRF19I98sCVYFBcOtxOOgGLFkWW+ZjrPqll+dKtTuUMnraP/56pkj8WELh3GgSgyG6ZGym1hGkl7DQDJr9ZxMZpsZK8bQhkSmaXFXDwHy1Scqp5Et2jFIGHvOdsPEJqpe4qAvRF3xeBLX5PFVktykfJ2T76gK1mYLBdYsCeROityJ1T4UKUTmoOJXAqwhfINof6SLe/LOQPxvHartsIalaJwwZZ5cyWGOfk+Hd4rzykW6cFNAIyEawWY2+KsQCMyVIRLPaBpImDkjVPvqTN9P94KnAlMksF+H08RVo7f6wCrQ/Vgj5MC8bpseKRAF/gnieQvsWL6FuWuS/O3hW/huf6dJgCx+WtWCwErRcWQ74X08YFj2dpXJeFl/vtngq63VMkdRG63QkS5aufCQAGL3Rj03vicQCTN96CwLfNFiGQVfxjUl33qmoV7hm2CGgErPSUSD0kjEVONecFn703olDjvSFG77d7CvQlXX6C9OKaGEkf4i01ofSjfeAf355mD7uEr8UABCARiOzfX5195MzKWZBuVjNAhOaq8mTQ3RXuVAjmPDB2R3iKPeDyp856jW/+ZMkvH4FROqYE5lOefMp9kRjICmjCAuTDe/TiD+CPQEx/EFYAcqvOqfNo6XqUfM0BeRvdMSKgBwPtqXRXWa7uCjcJi2G2p9INrh1yNmt0eQngm4ewaH9MMdnx0DTKS7oc7CnxJwHkHP0H+CGELBnWKteHL8Or89vK/i5+Fc9BhRsBolwZpKzuChepp8KVzbMc+Wg12rxJki9CWmsy+O5Coa/dNUnyQWW9EgaXg72UAuihMoRauvvEvefGLb8ObyztgMLVV6BqQwccXtQKxYuMULHqqFT97kFoyl8Kt4sjEdaFq9KVCoHuE85YHFr0Nd5b4sw+uyZKWgJGkU9Wu3MSiynvs3OiNDonHs5F+uA/0oysgMKzd0D3Vif4vnWDWYJjVu33svK1Ub+/DqsXtzNY0uGFpFYmHlv757JysZAIBHfCVXBGcNQJJyzKGTRu68frCZLkjaAKOFpZlCctS42Ev5+pZgWY8OAREBeH61vWcy8suwqFvaEFbHE6WlRJRhscWWRSiqD5sqV10PaXJAbefWKkRGr861N6zYh5QQU+OyZhlzmsz46JVr73jniJxPJ43ZlPt7MCaCTvuAVahNIiJLf3VzJuF3Vni2nLpHPww2mtUDQPldIKBSmX4Mu0y8p1h5XrjdCyN4UKgO7jDlJptl25xv4Fn0wOx2FZMSImeeXGYQFk4yXSC5mJAh+g4Nu74LP8BvggHBP6BMpyvTRnSQfvpgKFQGkmKHoDod/A/OJW+HpjK9QeaIPl85fCgvi3oDzdDIcWtqBEseL+tj//FotwgI1vDsrSDAp/KpkgGWhuPJBYMbmyeI6Lx9Vt50QJAHNyu8AbAWURrDceThmccpHLroltQ1vGACXp7XBkYTsUZTRB5RYj1HxlgO/PG6DJ0AxNRj1cbKyD8oNVULrcBIdSebG05eQCaDvdPhwCU8f0T9T0e9jGlsFtjwfP7bGsCC/mY1Fo1aIcXRPzpznQdfdvrABj5z14er0ZvBCawL3wgJK1+DfgHdzTBH8I4Y8saofP3jwPs59OguNllaA3tUB9SyM06BH8Yj3U1TVCk94ExuvtUFOsh0PzsXBWgGUFSOcyP5Sc7PrxP/Id0kPKvbbHCdA48PwoFuEx/kjO8TyLRW5NVQ4rgAYVkZR7iwH3VgR2nx7Iu98KR9Lb4PO5dfDh2ly43KqH5pY2qG9oRvAGMLS2w3+euwgzE2ZAYcEB0Ddi4UtwC+EqFC8yWBVAshvowAuwjRmZ6olgsjw+fEayxLFWeTb3Ic9tPrNHlMDH52fuwIR1neCB4J4osnMXX1E9lLaDAQ6nmqD+VAfUNzXC3vz9cLLqNNwwd4HReAWOH6uCpFmz4d1Vq8FowHOzrBkOLcB7cfXU8KTpQa+msQIe6G9j65YZbXZHOBIDFJBkPYRojqw6RyvRdYdvJ3nUmXqg5MJdyC75LyjAjxQ9TF4BKuKreQa4WGmAsvIyCPTyg32798N7q96F5xKmw+lvzoKp/Sp8V3cBvjtXD0eW4H34huq9hUjvP//JMVYAjSEJLitkKI8chM15WvLIeQZ9FObcROy2Da2I3cX8uL2/lT67VCzwrcfX71h/sIrTDfAVvnlO7jJAzYWzsGt7PrQYTVBRcRJKS8vh6nUzfHehDk5X1sCJD7DYN6nztHL8LKgL2PZyseW/E9EquGwY3ymDuW9DkWX+01YxQSsxzYl4/J6XYU1FDpwy1UJr1xVWgPqBDESsBB3o85WXwXS1HRobW6D69Lew9+P9kPJKCoQEBEOodzgUzKuD0owrcCitpc8VIAl8PgZPdlmBHWYwrttiJAWcWVk8dt1K82xFFJ/yblu5KEfW6oECnlSUaoCjS6/CvjVF8GzidHh84HAYYNMfHnngIRjQ71F4wn44zIlNgdJFHfxbkIZnRzRA/ZsC3TIcloXWyBCyZHi3rTFC6vnesToXA/uX1CoPo21AlrpPXS1bdA1mRSXDsCGDISwwHGbNmAUvPf8SvPjsS+A+0h20Xu7wyXLcWqnXWBEMXvU9yJl9pFZgW4bNkP5Ozu9HmV23xIAsAlFbly0TJG6jJfIJlixXNJuTtXl5iSQ/kMRWADtZhAf59EcdMGvmczD8saGwcX0WtOLhbbjcDLX4Kg30DQIvF3coK/kajq4xQNF86jy/V/4tq0OsHo+Ntk923hwtkTjIBCH0N6MlYeyC1nINn6NYyaN9dfU65YHqAr58owUKd5bAqv9YBbYPD4K331qF8C1wtvY81NRegAlRMRCsDYINm9ZD9mt/haPpN/hWUm0h5TXa1xgy0WUlgfQl5+zxCqSSz47+l+tIIZtm/ksBBFKe0QkZz66CyZOeAUd7R1i4IAMu1TfBtzXn4QJ+jf896VVwsh8Jfj5esDmpAI4tvgFFac1WZ0D5kP3YsJ3otIKBoZwQ2llYEsEx/wP0s6moaCZlXsRkV779J+sCEORYhhnWJeVBcKAveDl6wrzX5kM9vo3Onb8ADU0GeHNuGriNcIGw4FHwccpxKEu/ajkH+DsZcZn5AvP+4xHfYdNGrh1jRlAF0vmDaHD8YBzCj5PIl3POeA3lSRTTPeQHbXxOKkyvVwoowgN8NOM6fPS7Q+Di/iQMHPAw2ONb5/OCg9DQ0Ap5u/aB/eNDwXbgw+Dh5gh7XseDnI5vI7yP3kafz7t48ye7rx42g/s7jfhjqJ4BZiF4lrAYM0j0HbOiUHxOkTIfJa3Nfk0pgHfRBAcWfA/pk9dBXOAMmD12AeTNrYDCjO9ha1IxzAhLhhhdIixLyIYD8xvY9fK9EW7xv+z/Xg6Kd1whg41EKKescQx0ZCb53Mq+YyafI0VuDYPmw4OhZffLrAh6FRII/dV1YuktOL7MDCd+f5O98w+n4j+XcbscW3IDvl7ayebVf53FamcmC5xfNmg1hr7omUegBKmWw8axrACHzLFsDn2Wz/0L/hlY9pDUXdYfTHunQMmSi8pq0MGkLcW+tuwVSV3G74T4VtAcXUfbJsI17n/2/43VgwoZEGKf/ERGcA2BM+BNUYp4LgoitoQRvEWlD0HXFy5S7YYsBvbTMkJ63Kb8n7Xnf+6gYuiw205zyRyeoit/8g+j9VTEiA1jpD9/8hRcO2Bjrt9no/90lU3BhpR+mbPjfjPH9tHf2BIUvcvpg0RfVba9UORTjubuD67R/BMnGkULAziZ8QAAAABJRU5ErkJggg==" InformativeScreenshot="93486380c18099273e99d29bd6af658a.jpg" Selector="&lt;html app='chrome.exe' title='Best 2 Bedroom Apartments in Austin, TX: from $1,035 | RentCafe' /&gt;" Url="https://www.rentcafe.com/*" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
